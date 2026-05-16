@@ -4,21 +4,29 @@ body{
   justify-content: center;
   align-items: center;
   background-color: white;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
 }
+
 #mainContainer{
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  overflow-x: scroll;
-  
+  width: 100%;
+  overflow-x: hidden;
 }
+
 header{
   display: flex;
   align-items: center;
+  justify-content: space-between;
   width: 100%;
   padding: 8px;
+  box-sizing: border-box;
 }
+
 .navBut {
   border: none;
   background: transparent;
@@ -26,15 +34,17 @@ header{
 
 .searchBar {
   display: none;
-  padding: 0;
+  padding: 0 10px;
   border: 1px solid black;
   border-radius: 10px;
   height: 40px;
-  width: 55vh;
+  width: 100%;
+  max-width: 300px;
   margin-left: 5px;
   box-sizing: border-box;
-  transition: 0.4;
+  transition: 0.4s;
 }
+
 .searchBar:focus{
  outline: none;
  border-bottom: 2px solid black;
@@ -44,42 +54,49 @@ header{
   border: none;
   background: transparent;
 }
+
 .searchImg{
   width: 20px;
   height: 20px;
 }
+
 #title{
   font-size: 20px;
+  text-align: center;
 }
 
-
 /* about area */
+
 .note{
   color: red;
 }
+
 .show{
   display: block;
 }
+
 .aboutUs{
   border: solid white 2px;
   border-radius: 10px;
-  display: flex;
+  display: none;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   padding: 10px;
   color: black;
-  display: none;
+  width: 90%;
+  box-sizing: border-box;
 }
-
 
 .buttonsSec{
   border: solid black 1px;
+  width: 90%;
   height: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  box-sizing: border-box;
 }
 
 .focusBut{
@@ -89,12 +106,51 @@ header{
 .homeLogo{
   width: 100%;
   height: auto;
+  object-fit: cover;
 }
 
 /* pages css is here */
 
 .page{
   border: solid black 2px;
-  width: 100%;
+  width: 90%;
   height: auto;
+  box-sizing: border-box;
+}
+
+/* MOBILE FIX */
+
+@media (max-width: 600px){
+
+  body{
+    width: 100%;
+    overflow-x: hidden;
+  }
+
+  header{
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  #title{
+    font-size: 18px;
+  }
+
+  .searchBar{
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .page{
+    width: 95%;
+  }
+
+  .buttonsSec{
+    width: 95%;
+  }
+
+  .aboutUs{
+    width: 95%;
+  }
+
 }
