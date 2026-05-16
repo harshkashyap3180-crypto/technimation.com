@@ -3,10 +3,11 @@ body{
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: white;
+  background-color: black;
   margin: 0;
   padding: 0;
   overflow-x: hidden;
+  color: white;
 }
 
 #mainContainer{
@@ -116,6 +117,7 @@ header{
   width: 90%;
   height: auto;
   box-sizing: border-box;
+  padding: 10px;
 }
 
 /* MOBILE FIX */
