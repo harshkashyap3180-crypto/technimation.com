@@ -148,7 +148,7 @@ header{
   }
 
   header{
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     gap: 10px;
   }
 
@@ -157,8 +157,8 @@ header{
   }
 
   .searchBar{
-    width: 100%;
-    max-width: 100%;
+    width: 180px;
+    max-width: 180px;
   }
 
   .page{
